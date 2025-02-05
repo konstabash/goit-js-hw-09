@@ -14,8 +14,8 @@ if (localStorage.getItem("feedback-form-state") != null) {
 };
 
 form.addEventListener('input', e => {
-    formData.email = emailField.value;
-    formData.message = messageField.value;
+    formData.email = emailField.value.trim();
+    formData.message = messageField.value.trim();
     localStorage.setItem("feedback-form-state", JSON.stringify(formData));
 });
 
